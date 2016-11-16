@@ -81,7 +81,7 @@ MYSQL_USER='app_user',\
 MYSQL_PASSWORD='password',\
 MYSQL_DATABASE='microservices',\
 MYSQL_SERVICE_HOST='MYSQL'\
-  https://github.com/debianmaster/microservices-on-openshift.git \
+  https://github.com/prasenforu/microservice.git \
   --name=emailsvc --image-stream='python:2.7'  -l microservice=emailsvc
 ```
 
@@ -109,7 +109,7 @@ oc new-app -e EMAIL_APPLICATION_DOMAIN=http://emailsvc:8080,\
 MONGODB_DATABASE=userdb,MONGODB_PASSWORD=password,\
 MONGODB_USER=mongouser,DATABASE_SERVICE_NAME=mongodb \
 --context-dir='nodejs-users-api' \
-https://github.com/debianmaster/microservices-on-openshift.git \
+https://github.com/prasenforu/microservice.git \
 --name='userregsvc' -l microservice=userregsvc
 
 oc expose svc/userregsvc
@@ -125,7 +125,7 @@ This microservice is a java application which takes twitter username as input an
 oc import-image --from=registry.access.redhat.com/jboss-webserver-3/webserver30-tomcat8-openshift tomcat8 --confirm
 
 oc new-app \
-https://github.com/debianmaster/microservices-on-openshift.git \
+https://github.com/prasenforu/microservice.git \
 --context-dir='java-twitter-feed-api' \
 --image-stream='tomcat8'  \
 --name='twitter-api' -l microservice=twittersvc
@@ -143,7 +143,7 @@ Note that we are setting an environment variable for userregsvc to access the ba
 $ oc new-app -e USER_REG_SVC="http://userregsvc-$OSE_PROJECT.$OSE_DOMAIN" \
 -e TWITTER_FEED_SVC="http://twitter-api-$OSE_PROJECT.$OSE_DOMAIN" \
 --context-dir='php-ui' \
-https://github.com/debianmaster/microservices-on-openshift.git \
+https://github.com/prasenforu/microservice.git \
 --name='userreg' \
 -l microservice=userreg
 
