@@ -142,7 +142,9 @@ https://github.com/prasenforu/microservice.git \
 
 oc expose svc/twitter-api
 ```
+For Testing use following URL
 
+``curl http://twitter-api-microsrv.cloudapps.teg.com/simple-service-webapp/api/tweets?name=debianmaster``
 
 ## 4. Create the frontend user registration application as a separate microservice  
 >   (php application)   
