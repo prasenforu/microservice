@@ -145,6 +145,8 @@ oc expose svc/twitter-api
 For Testing use following URL
 
 ``curl http://twitter-api-microsrv.cloudapps.teg.com/simple-service-webapp/api/tweets?name=debianmaster``
+``curl http://twitter-api-microsrv.cloudapps.teg.com/simple-service-webapp/api/tweets?name=potus``
+``curl http://twitter-api-microsrv.cloudapps.teg.com/simple-service-webapp/api/tweets?name=BarackObama``
 
 ## 4. Create the frontend user registration application as a separate microservice  
 >   (php application)   
