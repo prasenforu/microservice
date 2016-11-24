@@ -87,6 +87,16 @@ MYSQL_SERVICE_HOST='MYSQL'\
 
 Although we can expose this service using a URL, if we want this email service to be used by other applications over http using the command ``oc expose svc/emailsvc``, we are not doing it here as we intend to use this as an internal service. You will see in the next section that the User Registration service will use the internal service name ```emailsvc``` to send emails.
 
+For testing purpose use ``oc expose svc/emailsvc`` command then use following command to test email service.
+
+In browser URL use:
+
+``http://emailsvc-microsrv.cloudapps.teg.com/email``
+
+In command line use:
+
+``curl -X POST -d '{"to":"prasenforu@gmail.com","msg":"test mail"}' -H "Content-Type: application/json" http://emailsvc-microsrv.cloudapps.teg.com/email``
+
 ## 2. Creating User Registration Backend Micro Service (nodejs application)
 This service contains two components. It has a database that saves the user data for which we are using MongoDB. It has business logic layer that exposes REST APIs to register a user, get userslist etc. This part of the application is written in NodeJS. We can deploy this microservice using one of the following two approaches. 
 
