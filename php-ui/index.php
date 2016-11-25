@@ -4,7 +4,7 @@
  include 'head.php';
 ?>
 <body ng-app="myApp">
-    Sample Change
+<?php echo "<p align='center'> <font color=blue  size='5pt'>Welcome Microservices</font> </p>"; ?>
     <div class="container" ng-controller="appController">
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
@@ -64,5 +64,6 @@
     </div>
    
 </body>
+ <?php echo "<p align='center'> <font color=blue  size='5pt'>Welcome Microservices</font> </p>"; ?>
 
 </html>
