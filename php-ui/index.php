@@ -5,7 +5,6 @@
 ?>
 <body ng-app="myApp">
 <?php echo "<p align='center'> <font color=blue  size='5pt'>Welcome Microservices</font> </p>"; ?>
-<?php echo "<p align='center'> <font color=green  size='3pt'>Demo Application</font> </p>"; ?>
     <div class="container" ng-controller="appController">
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
